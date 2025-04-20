@@ -57,8 +57,6 @@ import {
 - ✅ **Token refund** for unused balances
 - ✅ **Slippage protection** using `minAmountsOut`
 - ✅ **Token ordering enforced** (RETH before WETH)
-- ⚠️ **No reentrancy guard** (assumes safe Balancer Vault)
-- ⚠️ **Open access model**, no admin control
 
 ---
 
