@@ -31,20 +31,3 @@
 
 ---
 
-## User Flow
-
-### Joining the Pool
-
-1. User calls `join()` with RETH and/or WETH.
-2. Contract transfers and approves tokens to the Vault.
-3. Liquidity is added and BPT is minted.
-4. Any unused tokens are refunded.
-
-### Exiting the Pool
-
-1. User calls `exit()` with the amount of BPT to redeem.
-2. Contract transfers BPT to the Vault.
-3. RETH is redeemed and sent to the user.
-
----
-
