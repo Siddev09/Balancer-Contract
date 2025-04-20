@@ -23,6 +23,23 @@ import {
 } from "./Constants.sol";
 ```
 
+## User Flow
+
+### Joining the Pool
+
+1. User calls `join()` with RETH and/or WETH.
+2. Contract transfers and approves tokens to the Vault.
+3. Liquidity is added and BPT is minted.
+4. Any unused tokens are refunded.
+
+### Exiting the Pool
+
+1. User calls `exit()` with the amount of BPT to redeem.
+2. Contract transfers BPT to the Vault.
+3. RETH is redeemed and sent to the user.
+
+---
+
 **Key Imports:**
 
 - `IERC20`: Standard ERC-20 interface
@@ -42,16 +59,6 @@ import {
 - ✅ **Token ordering enforced** (RETH before WETH)
 - ⚠️ **No reentrancy guard** (assumes safe Balancer Vault)
 - ⚠️ **Open access model**, no admin control
-
----
-
-## Design Philosophy
-
-- ❌ No upgradeability
-- ❌ No owner/admin privileges
-- ✅ Fully trustless
-- ✅ Suitable for integration into DeFi strategies
-- ✅ Minimal logic for composability
 
 ---
 
@@ -129,18 +136,6 @@ No way to recover mistakenly sent tokens.
 Implement a `sweep()` function restricted to a trusted role or DAO.
 
 > 🛡️ Only allow non-core tokens (not RETH/WETH/BPT) to be swept.
-
----
-
-## Summary Table
-
-| Feature                        | Benefit                            |
-|-------------------------------|-------------------------------------|
-| `nonReentrant`                | Prevent reentrancy exploits         |
-| Token index support on exit   | Flexible withdrawal                 |
-| Join/Exit customization       | Advanced DeFi use cases             |
-| Event logging                 | Easier integration and monitoring   |
-| Token sweeper                 | Asset recovery safety               |
 
 ---
 
