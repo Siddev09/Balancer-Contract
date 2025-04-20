@@ -1,8 +1,3 @@
-Here is a **more professional and GitHub-ready markdown version** of your contract documentation, refined for clarity, formatting, and tone. This is great for use in a `README.md` or in your repo's contract-level documentation folder.
-
----
-
-```markdown
 # 🧾 BalancerLiquidity Smart Contract
 
 ## Overview
@@ -203,17 +198,3 @@ Implement a `sweep()` function restricted to a trusted role or DAO.
 
 ---
 
-## Contact
-
-For audits, integrations, or questions, feel free to open an issue or pull request.
-
----
-
-```
-
-Let me know if you'd like:
-- A `CONTRIBUTING.md` for this repo
-- A `Usage Guide` for dApp/frontend devs
-- A separate writeup for **audit scope & checklist**
-
-Happy to help make your GitHub look pro 👨‍💻📦
