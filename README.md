@@ -53,14 +53,14 @@ import {
 
 ## Security Considerations
 
-- ✅ **Minimal token approvals** (per call)
-- ✅ **Token refund** for unused balances
-- ✅ **Slippage protection** using `minAmountsOut`
-- ✅ **Token ordering enforced** (RETH before WETH)
+- **Minimal token approvals** (per call)
+- **Token refund** for unused balances
+- **Slippage protection** using `minAmountsOut`
+- **Token ordering enforced** (RETH before WETH)
 
 ---
 
-## 📈 Recommended Improvements
+## Recommended Improvements
 
 The current implementation is minimal by design. However, the following enhancements are recommended to improve safety, flexibility, and interoperability.
 
@@ -133,7 +133,7 @@ No way to recover mistakenly sent tokens.
 **Improvement:**  
 Implement a `sweep()` function restricted to a trusted role or DAO.
 
-> 🛡️ Only allow non-core tokens (not RETH/WETH/BPT) to be swept.
+> Only allow non-core tokens (not RETH/WETH/BPT) to be swept.
 
 ---
 
